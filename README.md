@@ -3,13 +3,16 @@
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version = 3.0.0
+
+* Rails version = 7.0.2
 
 * System dependencies
 
 * Configuration
 
 * Database creation
+  * Table - Article
 
 * Database initialization
 
