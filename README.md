@@ -22,4 +22,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* REST - Representational State Transfer - mapping HTTP verbs (get, post, put/patch, delete) to CRUD actions
+
+resources (in routes.rb) provides REST-ful routes to Rails resources
