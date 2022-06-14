@@ -6,11 +6,11 @@ class ArticlesController < ApplicationController
 
   # used to display a summarized listing of al items in the Article table
   def index
-      @articles = Article.all
+    @articles = Article.all
   end
 
   def new
-
+    @article = Article.new
   end
 
   def create
@@ -19,11 +19,15 @@ class ArticlesController < ApplicationController
     #render plain: @article.inspect
     
     #save to database
-    @article.save
-
-    #redirect to show page
-    #redirect_to article_path(@article)
-    #shortcut for redirect 
-    redirect_to @article
+    if @article.save
+      # alert is used when something goes wrong
+      flash[:notice] = "Article was created successfully."
+      #redirect to show page
+      #redirect_to article_path(@article)
+      #shortcut for redirect 
+      redirect_to @article
+    else
+      render 'new'
+    end
   end
 end
