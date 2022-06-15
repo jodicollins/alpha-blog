@@ -71,5 +71,6 @@ group :test do
 end
 
 group :production do
+    # postreSQL gem
   gem 'pg'
 end
